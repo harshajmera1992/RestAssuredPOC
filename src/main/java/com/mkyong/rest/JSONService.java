@@ -24,7 +24,7 @@ public class JSONService {
 		try{
 			//ClassLoader classLoader = getClass().getClassLoader();
 			System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-			System.setProperty("webdriver.chrome.driver", (JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"//driver//chromedriver.exe"));
+			System.setProperty("webdriver.chrome.driver", (JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"//driver//chromedriver"));
 			driver = new ChromeDriver();
 		}
 		catch(Exception ex){
