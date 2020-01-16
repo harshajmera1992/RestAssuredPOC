@@ -1,0 +1,5 @@
+com\mkyong\rest\JSONService.class
+com\mkyong\rest\ExecuteMain.class
+com\mkyong\rest\client\NetClientPost.class
+com\mkyong\rest\Product.class
+com\mkyong\rest\client\NetClientGet.class
