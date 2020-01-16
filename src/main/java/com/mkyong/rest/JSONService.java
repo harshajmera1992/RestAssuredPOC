@@ -23,7 +23,7 @@ public class JSONService {
 		WebDriver driver = null;
 		try{
 			//ClassLoader classLoader = getClass().getClassLoader();
-			System.setProperty("webdriver.chrome.driver", ("src\main\resources\driver\chromedriver.exe"));
+			System.setProperty("webdriver.chrome.driver", ("src//main//resources//driver//chromedriver.exe"));
 			driver = new ChromeDriver();
 		}
 		catch(Exception ex){
