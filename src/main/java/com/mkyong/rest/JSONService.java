@@ -9,6 +9,7 @@ import javax.ws.rs.core.Response;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @Path("/json/product")
 public class JSONService {
@@ -23,8 +24,16 @@ public class JSONService {
 		WebDriver driver = null;
 		try{
 			//ClassLoader classLoader = getClass().getClassLoader();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1200x600");
+			String binaryPath=EnvironmentUtils.getProcEnvironment().get("GOOGLE_CHROME_SHIM");
+			System.out.println("Path: "+binaryPath);
+			options.setBinary(binaryPath);     
+			options.addArguments("--disable-gpu");
+			options.addArguments("--no-sandbox");       
 			//System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//target//RESTfulExample//src//main//resources//driver//chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//target//RESTfulExample//src//main//resources//driver//chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		catch(Exception ex){
