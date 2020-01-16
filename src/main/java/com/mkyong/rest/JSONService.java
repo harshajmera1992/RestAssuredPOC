@@ -20,6 +20,16 @@ public class JSONService {
 	@Path("/get")
 	@Produces("application/json")
 	public Product getProductInJSON() {
+		WebDriver driver = null;
+		try{
+			//ClassLoader classLoader = getClass().getClassLoader();
+			System.setProperty("webdriver.chrome.driver", ("/src/main/resources/driver/chromedriver.exe"));
+			driver = new ChromeDriver();
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+		}
+		driver.manage().window().maximize(); 
 		Product product = new Product();
 		product.setName(PRODUCT_NAME);
 		product.setQty(PRODUCT_QTY);
