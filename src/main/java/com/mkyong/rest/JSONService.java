@@ -24,17 +24,8 @@ public class JSONService {
 	public Product getProductInJSON() {
 		WebDriver driver = null;
 		try{
-			//ClassLoader classLoader = getClass().getClassLoader();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
-			options.addArguments("window-size=1200x600");
-			String binaryPath=EnvironmentUtils.getProcEnvironment().get("GOOGLE_CHROME_SHIM");
-			System.out.println("Path: "+binaryPath);
-			options.setBinary(binaryPath);     
-			options.addArguments("--disable-gpu");
-			options.addArguments("--no-sandbox");       
 			//System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//target//RESTfulExample//src//main//resources//driver//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//src//main//resources//driver//chromedriver");
 			driver = new ChromeDriver();
 			System.out.println("-------------------"+System.getProperty("user.dir"));
 		}
