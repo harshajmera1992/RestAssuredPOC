@@ -43,6 +43,7 @@ public class JSONService {
 		}
 		driver.manage().window().maximize(); 
 		driver.navigate().to("http://www.facebook.com");
+		System.out.println("Navigated to Facebook.com");
 		Product product = new Product();
 		product.setName(PRODUCT_NAME);
 		product.setQty(PRODUCT_QTY);
