@@ -36,6 +36,7 @@ public class JSONService {
 			//System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//target//RESTfulExample//src//main//resources//driver//chromedriver.exe");
 			driver = new ChromeDriver();
+			System.out.println("-------------------"+System.getProperty("user.dir"));
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
