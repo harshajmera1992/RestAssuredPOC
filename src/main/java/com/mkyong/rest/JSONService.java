@@ -42,6 +42,7 @@ public class JSONService {
 			ex.printStackTrace();
 		}
 		driver.manage().window().maximize(); 
+		driver.navigate().to("http://www.facebook.com");
 		Product product = new Product();
 		product.setName(PRODUCT_NAME);
 		product.setQty(PRODUCT_QTY);
