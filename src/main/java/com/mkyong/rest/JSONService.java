@@ -24,10 +24,12 @@ public class JSONService {
 	public Product getProductInJSON() {
 		WebDriver driver = null;
 		try{
+			System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+			System.out.println("-------------------"+System.getProperty("user.dir"));
 			//System.out.println(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//src//main//resources//driver//chromedriver");
 			driver = new ChromeDriver();
-			System.out.println("-------------------"+System.getProperty("user.dir"));
+			
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
