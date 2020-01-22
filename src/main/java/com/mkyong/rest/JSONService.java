@@ -54,7 +54,7 @@ public class JSONService {
 			prop.load(input);
 
 			// get the property value and print it out
-			System.out.println(prop.getProperty("URL"));
+			System.out.println("URL is :: "+prop.getProperty("URL"));
 			
 		} catch (IOException ex) { 
 			System.out.println("Ex2 :: "+ex);
