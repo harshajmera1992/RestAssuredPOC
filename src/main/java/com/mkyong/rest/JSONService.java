@@ -43,6 +43,7 @@ public class JSONService {
 			System.out.println("-------------------"+System.getProperty("user.dir"));
 		}
 		catch(Exception ex){
+			System.out.println("Ex1 :: "+ex);
 			ex.printStackTrace();
 		}
 		try{
@@ -56,6 +57,7 @@ public class JSONService {
 			System.out.println(prop.getProperty("URL"));
 			
 		} catch (IOException ex) { 
+			System.out.println("Ex2 :: "+ex);
 			ex.printStackTrace();
 		}
 		driver.manage().window().maximize(); 
