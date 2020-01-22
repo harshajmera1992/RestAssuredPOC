@@ -47,7 +47,7 @@ public class JSONService {
 			ex.printStackTrace();
 		}
 		try{
-			InputStream input = new FileInputStream(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"//excelData//testData//TestData.properties");
+			InputStream input = new FileInputStream("//app//target//RESTfulExample//src//main//resources//excelData//testData//TestData.properties");
 			Properties prop = new Properties();
 
 			// load a properties file
@@ -62,7 +62,7 @@ public class JSONService {
 		}
 		driver.manage().window().maximize(); 
 		driver.navigate().to("http://www.facebook.com");
-		System.out.println("Navigated to Facebook.com");
+		System.out.println("Navigated to Facebook111111.com");
 		Product product = new Product();
 		product.setName(PRODUCT_NAME);
 		product.setQty(PRODUCT_QTY);
