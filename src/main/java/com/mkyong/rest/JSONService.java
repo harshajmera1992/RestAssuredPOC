@@ -6,6 +6,10 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 import org.apache.commons.exec.environment.EnvironmentUtils;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +43,19 @@ public class JSONService {
 			System.out.println("-------------------"+System.getProperty("user.dir"));
 		}
 		catch(Exception ex){
+			ex.printStackTrace();
+		}
+		try{
+			InputStream input = new FileInputStream(JSONService.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"//excelData//testData//TestData.properties");
+			Properties prop = new Properties();
+
+			// load a properties file
+			prop.load(input);
+
+			// get the property value and print it out
+			System.out.println(prop.getProperty("URL"));
+			
+		} catch (IOException ex) { 
 			ex.printStackTrace();
 		}
 		driver.manage().window().maximize(); 
