@@ -47,7 +47,7 @@ public class JSONService {
 			ex.printStackTrace();
 		}
 		try{
-			InputStream input = new FileInputStream(System.getProperty("user.dir")+"\src\main\java\excelData\testData\TestData.properties");
+			InputStream input = new FileInputStream(System.getProperty("user.dir")+"\src\main\resources\excelData\testData\TestData.properties");
 			Properties prop = new Properties();
 
 			// load a properties file
